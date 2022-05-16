@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,12 +13,12 @@
 </head>
 <body>
 <div id="header">
-<center><h1> Welcome to Admin Panel!</h1> </center>
+<center><h1> Property Owner Request Form</h1> </center>
 </div> 
 	
-   <!--enctype=”multipart/form-data is the action which encoding the files and allow you to sent through POST-->
-<form method="POST" action="insertproperty.php" name="property" onsubmit="return FormValidation()" enctype="multipart/form-data" >
-<div> <h3> Add New Property</h3></div>
+   
+<form method="POST" action="#" name="property" onsubmit="return FormValidation()" enctype="multipart/form-data" >
+<div> <h3> Request To add Property</h3></div>
   	<div class="input-group">
   	  <label>Property Name:</label>
   	  <input type="text" name="pname"  id="pname" >
@@ -26,7 +27,6 @@
   	  <label>Property Owner: </label>
   	  <input type="text" name="owner" id="owner">
   	</div>
-
   	<div class="input-group">
   	  <label>property image:</label>
   	  <input type="file" name="image" id="image">
@@ -37,8 +37,8 @@
   	  <label>Property type:</label>
       <select name="type">
         <option value="">--select--</option>
-        <option value="studio apartment">Studio apartment</option>
-        <option value="Office Space">Office space</option>
+        <option value="studio apartment">studio apartment</option>
+        <option value="Office Space">office space</option>
         <option value="One bedroom apartment">One bedroom apartment</option>
         <option value="Two bedroom apartment">Two bedroom apartment</option>
         <option value="Three bedroom apartment">Three bedroom apartment</option>
@@ -67,11 +67,7 @@
     
       <div class="input-group">
   	  <label>property status:</label>
-  	  <select>
-      <option value="">--select--</option>
-        <option value="Vacant">Vacant</option>
-        <option value="Occupied">Occupied</option>
-      </select>
+  	  <input type="text" name="status" id="status">
   	</div>
       <div class="input-group">
   	  <label>property Price:</label>
@@ -79,66 +75,63 @@
   	</div>
 	 
 <div class="input-group">
-  	  <button type="submit" class="btn" name="AddProperty">Add Property</button>
+  	  <button type="submit" class="btn" name="AddProperty">Submit Request</button>
   	</div>
   </form>
 
-
   <script>
     
-function FormValidation(){
-    pname = document.property.pname.value;
-    owner = document.property.owner.value;
-    type=document.property.type.value;
-    location= document.property.location.value;
-    status= document.property.status.value;
-	price= document.property.price.value;
-    if(pname == ""){
-      alert('Username cannot be blank');
-      document.getElementById('pname').focus();
-      return false;
+    function FormValidation(){
+        pname = document.property.pname.value;
+        owner = document.property.owner.value;
+        type=document.property.type.value;
+        location= document.property.location.value;
+        status= document.property.status.value;
+        price= document.property.price.value;
+        if(pname == ""){
+          alert('Username cannot be blank');
+          document.getElementById('pname').focus();
+          return false;
+        }
+        if(owner == ""){
+          alert('Payment id cannot be blank');
+          document.getElementById('owner').focus();
+          return false;
+        }
+        if(type == ""){
+          alert('type cannot be blank');
+          document.getElementById('type').focus();
+          return false;
+        }
+    
+        if(location == ""){
+          alert('location cannot be blank');
+          document.getElementById('location').focus();
+          return false;
+        }
+    
+        if(status == ""){
+          alert('status cannot be blank');
+          document.getElementById('status').focus();
+          return false;
+        }
+    
+        if(price == ""){
+          alert('price cannot be blank');
+          document.getElementById('price').focus();
+          return false;
+        }
+    
+    
+    
+    
+    
     }
-    if(owner == ""){
-      alert('Payment id cannot be blank');
-      document.getElementById('owner').focus();
-      return false;
-    }
-    if(type == ""){
-      alert('type cannot be blank');
-      document.getElementById('type').focus();
-      return false;
-    }
+    </script> 
 
-	if(location == ""){
-      alert('location cannot be blank');
-      document.getElementById('location').focus();
-      return false;
-    }
-
-	if(status == ""){
-      alert('status cannot be blank');
-      document.getElementById('status').focus();
-      return false;
-    }
-
-	if(price == ""){
-      alert('price cannot be blank');
-      document.getElementById('price').focus();
-      return false;
-    }
-
-
-
-
-
-}
-</script> 
-<div class="footer">
+  <div class="footer">
   <p class="footer-text-left">
    
    <h4> All right reserved &copy  2022 kemunto</h4>
   </p>
 </div>
-
-  </body>
-</html>

@@ -66,9 +66,7 @@
    
    <h4> All right reserved &copy  2022 kemunto</h4>
 <div class="footer-content-right">
-  <a href="https://github.com/digitalocean"><img src="../img/github.jpeg" class="icon-style" alt="Github icon"></a>
-  <a href="https://www.twitter.com/DigitalOcean"><img src="../img/twitter.jpeg" class="icon-style" alt="Twitter icon"></a>
-  <a href="https://www.twitter.com"><img src="../img/email.jpeg" class="icon-style" alt="Emailicon"></a>
+  
 </div>
   </p>
 </div>

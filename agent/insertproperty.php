@@ -1,3 +1,9 @@
+
+<?php
+error_reporting(0);
+//The error_reporting(0) is for getting 0 error while php code is running.
+?>
+
 <?php
 include('../partials/connection.php');
  
@@ -11,10 +17,10 @@ include('../partials/connection.php');
                 $status=$_POST['status'];
                 $price =$_POST['price'];      
                 //image upload
-        $pimage=$_FILES['pimage']['name']; 
-        $pimage_tmp=$_FILES['pimage']['tmp_name'];
-        $folder="../img/dbimg/"; 
-        move_uploaded_file($pimage_tmp, $folder.$pimage); //move the image to the created folder
+        $image=$_FILES["image"]["name"]; 
+        $image_tmp=$_FILES["image"]["tmp_name"];
+        $folder="../img/dbimg/" .$pimage; 
+        move_uploaded_file($image_tmp, $folder.$image); //move the image to the created folder
 
 
         //sql statement to insert values to the database  

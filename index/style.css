@@ -44,7 +44,7 @@ body{
   nav ul li .active{
     color:#c0d96f;
  }
- /*search button style*/
+ /*styling the form class*/
  .type {
   display: flex;
   align-items: center;
@@ -83,7 +83,7 @@ select {
       overflow: auto;
   }
   
-.propertygallery{
+/* .propertygallery{
       margin: 5px;
       border: 1px solid #ccc;
       width: 390px;
@@ -93,7 +93,57 @@ select {
   .propertygallery img{
       width: 100%;
       height: auto;
+  } */
+
+
+  .propertygallery {
+    float: left;
+    width: 33%;
   }
+
+  .propertygallery img{
+    max-height: 160px;
+    height: auto;
+    object-fit: contain;
+    padding: 5px;
+    width: 100%;
+    border: 1px solid #d9d9d9;
+}
+
+
+
+
+
+
+
+
+
+
+.gallerySlides {
+  display: none;
+}
+.prop-con{
+  display:flex;
+  flex-wrap: wrap;
+}
+.prop-detail{
+  min-height: 70px;
+  text-align: center;
+  width:50vw;
+  padding: 50px;
+  border: 2px solid teal;
+}
+button{
+  border:none;
+  background-color: teal;
+  border-radius:5px;
+  padding:20px;
+  color:#fff;
+  font-weight:bold;
+  text-transform: uppercase;
+  margin-top:15px;
+}
+
 
   .description{
   padding: 15px;

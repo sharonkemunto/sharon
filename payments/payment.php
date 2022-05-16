@@ -1,3 +1,9 @@
+<?php 
+include('../register/server.php');
+if($username !== ""){
+  
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -112,5 +118,8 @@ function FormValidation(){
 
 }
 </script> 
+<?php } else { 
+  header("Location:../register/login.php"); 
+}?>
   </body> 
 </html>

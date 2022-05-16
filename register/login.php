@@ -1,4 +1,7 @@
-<?php include('./server.php') ?>
+<?php 
+// include('./server.php')
+include('./loginvalidation.php')
+?>
 <!DOCTYPE html>
 <html>
 
@@ -16,7 +19,7 @@
             <li><a href="#">About Us</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Get in Touch</a></li>
-            <div class="admin">  <li><a href="#  ">login</a></li></div>
+            <div class="admin">  <li><a href="# ">login</a></li></div>
 
         </ul>
     </nav>
@@ -27,8 +30,8 @@
   	<h2>Login</h2>
   </div>
 	 
-  <form method="post" action="login.php">
-  	<?php include('errors.php'); ?>
+  <form method="post" action="../propertyowner/requestform.php">
+  	
   	<div class="input-group">
   		<label>Username</label>
   		<input type="text" name="username" >

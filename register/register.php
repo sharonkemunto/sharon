@@ -1,4 +1,7 @@
-<?php include('server.php');
+  <?php 
+  
+ 
+//   include('server.php'); -->
  ?>
 <!DOCTYPE html>
 <html>
@@ -6,6 +9,7 @@
   <title>Registration Form</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" type="text/css" href="../index/style.css">
+
 </head>
 <body>
 <nav>
@@ -23,15 +27,15 @@
   	<h2>Register</h2>
   </div>
 	
-  <form method="post" action="server.php" name="registration" onsubmit="return FormValidation()">
-  	<?php include('errors.php'); ?>
+  <form method="post" id="registration" name="registration" action="server.php">
+
   	<div class="input-group">
   	  <label>Username</label>
-  	  <input type="text" name="username" id="username" value="<?php echo $username; ?>">
+  	  <input type="text" name="username" id="username" >
   	</div>
   	<div class="input-group">
   	  <label>Email</label>
-  	  <input type="text" name="email" id="email" value="<?php echo $useremail; ?>">
+  	  <input type="text" name="email" id="email" >
   	</div>
   	<div class="input-group">
   	  <label>Password</label>
@@ -41,10 +45,12 @@
   	  <label>Confirm password</label>
   	  <input type="password" name="password2" id="password2">
   	</div>
+
 	  <div class="input-group">
    <select name="role" id="role">
-  <option value="Property Owner">owner</option>
-  <option value="Customer">customer</option>
+   <option value="">Choose Your role in the system</option>
+  <option value="Property Owner">Owner</option>
+  <option value="Customer">Customer</option>
    </select>
 </div>
 	 
@@ -61,40 +67,67 @@
   </p>
 </div>
 
-  <script>
-    
-	function FormValidation(){
-		username = document.registration.username.value;
-		email = document.registration.email.value;
-		password=document.registration.password.value;
-		password2= document.registration.password2.value;
-		role= document.registration.role.value;
+<script type="text/javascript">
+	// document.getElementById('registration').addEventListener('submit',  function(e){});
+	  //get the form with the id attribute 
+	  let form = document.getElementById('registration')
+	  form.addEventListener('submit',  function (e){
+		  //prevent the form from submitting
+		e.preventDefault();
+
+		var username = document.registration.username.value;
+		var email = document.registration.email.value;
+		var password=document.registration.password.value;
+		var password2= document.registration.password2.value;
+		var role= document.getElementById('role').value;
+		console.log(role);
+		
 		if(username == ""){
 		  alert('Username cannot be blank');
 		  document.getElementById('username').focus();
 		  return false;
 		}
 		if(email == ""){
-		  alert('Payment id cannot be blank');
+		  alert('Email address cannot be blank');
 		  document.getElementById('email').focus();
 		  return false;
 		}
+		 //VALIDATE EMAIL FIELD
+		 var emailFormat = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;//regular expression
+        if(!email.match(emailFormat)){
+            alert("Please enter a valid Email address"); //error message alert
+        document.getElementById("email").focus();
+        return false;
+        }
+		
 		if(password == ""){
-		  alert('Payment date cannot be blank');
+		  alert('Password cannot be blank');
 		  document.getElementById('password').focus();
 		  return false;
 		}
 		if(password2 == ""){
-		  alert('Payment date cannot be blank');
+		  alert('Password  cannot be blank');
+		  document.getElementById('password2').focus();
+		  return false;
+		}
+		if(password2 !== password){
+		  alert('Passswords do not match');
 		  document.getElementById('password2').focus();
 		  return false;
 		}
 		if(role == ""){
-		  alert('Payment date cannot be blank');
+		  alert('Please select a role');
 		  document.getElementById('role').focus();
 		  return false;
 		}
-	  }
+		form.submit();
+	  });
+
+
+	  
+    
+	
 	</script>
+  
 </body>
 </html>

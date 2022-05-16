@@ -1,6 +1,8 @@
 <?php
 include('../partials/connection.php');
- 
+
+// include('./server.php')
+
 //code to insert data to the database
         if(isset($_POST['AddPayment']))
         {
