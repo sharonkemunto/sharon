@@ -16,7 +16,7 @@
                                         <?php
                                         // Initialize the session
                                          
-                                        include ("C:/xampp/htdocs/dbconnection.php");
+                                        include ("C:/xampp/htdocs/Kemunto/partials/connection.php");
                                          
                                         session_start();
                                          
@@ -47,7 +47,7 @@
                                         session_destroy();
                                           
                                         // Redirect to login page
-                                        header("location: logins.php");
+                                        header("location: login.php");
                                         exit;
                                         ?>                                
                                         

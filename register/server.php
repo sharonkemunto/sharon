@@ -16,7 +16,11 @@ if (isset($_POST['registration']) || isset($_POST['username'])) {
   $password = mysqli_real_escape_string($connection, $_POST['password']);
   $password2 = mysqli_real_escape_string($connection, $_POST['password2']);
   $role = mysqli_real_escape_string($connection, $_POST['role']);
-
+  if($role == "Customer") {
+    $rolesign = 1;
+  } else {
+    $rolesign = 1;
+  }
   
 
   // form validation: ensure that the form is correctly filled ...
@@ -48,7 +52,7 @@ if (isset($_POST['registration']) || isset($_POST['username'])) {
   $password = md5($password);//encrypt the password before saving in the database
 
   $query = "INSERT INTO users (id, username, email, password,role) 
-        VALUES (NULL,'$username', '$email', '$password','$role')";
+        VALUES (NULL,'$username', '$email', '$password','$rolesign')";
 
   $result = mysqli_query($connection, $query);
   if ($result){

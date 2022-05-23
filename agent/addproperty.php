@@ -193,6 +193,7 @@
         }
     }
     </script> 
+
 <div class="footer">
   <p class="footer-text-left">
    
@@ -200,8 +201,10 @@
   </p>
 </div>
 
-
 </body>
+
+
+
 <!--link to javascript file thats used to display the children elements in the block-->
 <script src="../scripts/script.js"></script>
 </html>

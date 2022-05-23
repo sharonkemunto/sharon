@@ -27,13 +27,13 @@ if (isset($_POST['login_user'])) {
 			while($rows=$results->fetch_assoc()){
 				$role = $rows['role'];
 				echo $role;
-				if($role == "Customer"){
+				if($role == 0){
 					header('Location:../customer/index.php');
-				} 
+				} else {
 				echo "hello world";
-				// header('Location:../propertyowner/dashboard.php');
+				header('Location:../propertyowner/dashboard.php');
 			}
-			header('Location:../propertyowner/dashboard.php');
+			}
 		}
 	}
 }

@@ -1,3 +1,7 @@
+<php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +19,8 @@
 <center><img src="admin.png" alt="adminLogo" id="adminLogo"><br> <h2><b>Welcome to Admin Panel!</b> </h2></center>
 </div> 
 
-<h1> Hello! <?php echo $_SESSION ['username'];?></h1>
-
+<!--<h1> WELCOME! <?php echo $_SESSION ['username'];?></h1>
+-->
 <div class="sidebar-container">
 <div id="sidebar" style="width:450px;">
 <ul> 
@@ -50,14 +54,17 @@
   <a class="dropbtn">Property</a>
   <div id="myDropdown" class="dropdown-content">
     <a href="addproperty.php">Add New Property</a>
-    <a href="#">View Properties</a>
+    <a href="./Tables/property.php">View Properties</a>
     
   </div>
   </div>
 
 <li><div class="input-group">
 <div class="dropdown">
-<a class="dropbtn">Logs Table</a>
+<a href="./Tables/logs.php" class="dropbtn">Logs Table</a>
+
+
+
   
 </div> </div>
 
@@ -86,10 +93,10 @@
 
 </div>    
 
+
 <div id ="mainContent">
   <!--content-->
-  <p>content</p>
-<p style="background-image: url('../bg2.jpg');"> 
+  <button type="button" class="block">TOTAL PROPERTY</button>
 
 </div>
 </div>    

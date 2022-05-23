@@ -45,11 +45,8 @@
 
 <li><div class="input-group">
 <div class="dropdown">
-  <a class="dropbtn">My Profile</a>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="#">View Profile</a>
-    <a href="#">Change Password</a>
-    <a href="#">Log Out</a>
+<a href="#" class="dropbtn">My Profile</a>
+ 
 
     
   </div>
@@ -59,13 +56,7 @@
 
 
 </div>    
-<!--
-<div id="sidebar" style="background-image: url('background.jpg');">-->
-
-<div id ="mainContent" style="background-image: url('./img/background.jpg');">
-
-</div>
-</div>    
+    
 
 <div class="footer">
   <p class="footer-text-left">

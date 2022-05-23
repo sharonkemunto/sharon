@@ -24,7 +24,7 @@ include('../partials/connection.php');?>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Get in Touch</a></li>
-            <div class="admin"><li><a href="#">login</a></li></div>
+            <div class="admin"><li><a href="../agent/adminlogin.php">login</a></li></div>
 
         </ul>
     </nav>
@@ -91,7 +91,8 @@ include('../partials/connection.php');?>
     break;
   }}?>
 
-<!--    -->
+
+
 
 <footer>
 <p> Property Management System, Copyright &copy; 2022 </p>
