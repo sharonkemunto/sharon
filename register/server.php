@@ -54,7 +54,8 @@ if (isset($_POST['registration']) || isset($_POST['username'])) {
   if ($result){
     $_SESSION['username'] = $username;
     $_SESSION['success'] = "You are now logged in";
-    header('location: log.php');
+    echo "You are now logged in", $username;
+    header('location: login.php');
   }
  
 }

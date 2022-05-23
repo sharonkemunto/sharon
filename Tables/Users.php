@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>propertymanagement</title>
     <link  rel="stylesheet" type="text/css" href="../index/style.css">
+    <link  rel="stylesheet" type="text/css" href="table.css">
+
 </head>
 
 <body>
@@ -22,6 +24,8 @@
         </ul>
     </nav>
    
+  
+
     <div class="container">
       <?php 
         include('../partials/connection.php');
@@ -29,7 +33,7 @@
         $result = $connection->query($sql);
         $connection->close();
       ?>
-        <table>
+        <table class="tableContainer">
             <h2>Users Table</h2>
             <tr>
                 <th>user id</th>

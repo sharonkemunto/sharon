@@ -6,7 +6,7 @@
       $nowTimeStamp = date("Y-m-d H:i:s");
         // Prepare the SQL Statements  to Insert User Login Time                                            
                                              
-        $insertLogin_SQL = 'INSERT INTO accesslog (userID,timein,IPaddress )VALUES('.$id.',"'.$nowTimeStamp.' ","'.$userIP.'"'.')';
+        $insertLogin_SQL = 'INSERT INTO logs (logid,userid,timein,IPaddress )VALUES('.$id.',"'.$nowTimeStamp.' ","'.$userIP.'"'.')';
                                                              
     if ( $dbConnectionStatus->query($insertLogin_SQL))  {    
                                 $success = true;

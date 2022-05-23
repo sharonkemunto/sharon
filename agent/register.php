@@ -6,16 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
-    
-
-
 </head>
 <body>
 <div id="header">
 <center><img src="admin.png" alt="adminLogo" id="adminLogo"><br> <h2><b>Welcome to Admin Panel!</b> </h2></center>
 </div> 
-
-<h1> Hello! <?php echo $_SESSION ['username'];?></h1>
 
 <div class="sidebar-container">
 <div id="sidebar" style="width:450px;">
@@ -88,8 +83,44 @@
 
 <div id ="mainContent">
   <!--content-->
-  <p>content</p>
-<p style="background-image: url('../bg2.jpg');"> 
+  <!-- <p>content</p>
+<p style="background-image: url('../bg2.jpg');">  -->
+<div class="header">
+  	<h2>Register</h2>
+  </div>
+	
+  <form method="post" id="registration" name="registration" action="server.php">
+
+  	<div class="input-group">
+  	  <label>Username</label>
+  	  <input type="text" name="username" id="username" >
+  	</div>
+  	<div class="input-group">
+  	  <label>Email</label>
+  	  <input type="text" name="email" id="email" >
+  	</div>
+  	<div class="input-group">
+  	  <label>Password</label>
+  	  <input type="password" name="password" id="password">
+  	</div>
+  	<div class="input-group">
+  	  <label>Confirm password</label>
+  	  <input type="password" name="password2" id="password2">
+  	</div>
+
+	  <div class="input-group">
+   <select name="role" id="role">
+   <option value="">Choose Your role in the system</option>
+  <option value="Property Owner">Owner</option>
+  <option value="Customer">Customer</option>
+   </select>
+</div>
+	 
+<div class="input-group">
+  	  <button type="submit" class="btn" name="reg_user">Register</button>
+  	</div>
+  	<p>  <b>Already a member?</b><a href="login.php">Sign in</a></p>
+  </form>
 
 </div>
 </div>    

@@ -1,7 +1,4 @@
-<?php 
-// include('./server.php')
-include('./loginvalidation.php')
-?>
+
 <!DOCTYPE html>
 <html>
 
@@ -19,7 +16,7 @@ include('./loginvalidation.php')
             <li><a href="#">About Us</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Get in Touch</a></li>
-            <div class="admin">  <li><a href="# ">login</a></li></div>
+            <div class="admin"><li><a href="#">login</a></li></div>
 
         </ul>
     </nav>
@@ -30,11 +27,11 @@ include('./loginvalidation.php')
   	<h2>Login</h2>
   </div>
 	 
-  <form method="post" action="../propertyowner/requestform.php">
+  <form method="post" action="loginvalidation.php">
   	
   	<div class="input-group">
   		<label>Username</label>
-  		<input type="text" name="username" >
+  		<input type="text" name="username">
   	</div>
   	<div class="input-group">
   		<label>Password</label>

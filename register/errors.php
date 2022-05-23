@@ -1,4 +1,4 @@
-<?php 
+<!--<?php 
 error_reporting(0);
  if (count($errors) > 0) : ?>
   <div class="error">
@@ -7,3 +7,5 @@ error_reporting(0);
   	<?php endforeach ?>
   </div>
 <?php  endif ?>
+
+	  -->

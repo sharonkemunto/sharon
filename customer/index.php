@@ -5,62 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="../index/style.css">
+    <link rel="stylesheet" type="text/css" href="../agent/style.css"/>
 </head>
 <body>
-<nav>
-        <ul>
-            <li><a href="index.php" class="active">Home</a></li>
-            <li><a href="#"> View Property</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Get in Touch</a></li>
-           <!--<div class=""><li><a href="#">login</a></li></div>-->
-
-        </ul>
-    </nav>
+<div id="header">
+<center> <h2>Welcome to Customer Dashboard</h2> </h2></center>
+</div> 
 
 <div class="sidebar-container">
 
 
-<div id="sidebar">
+<div id="sidebar" style="width:450px;">
 <ul> 
-    <li><h1>Customer Dashboard</h1> </li>
+    <li><h1>Table List</h1> </li>
 
- <li><div class="input-group">
- <div class="dropdown">
-  <button class="dropbtn">Payments</button>
+   
+
+<li><div class="input-group">
+<div class="dropdown">
+  <a class="dropbtn">Payment</a>
   <div id="myDropdown" class="dropdown-content">
-    <a href="#">Pending</a>
     <a href="#">Approved</a>
-    <a href="#">View All payments</a>
-    
+    <a href="#">Pending</a>
+    <a href="#">View All Payments</a>  
   </div>
-</div>
-
-    
-
+  </div>
 
 <li>
 <div class="input-group">
 <div class="dropdown">
-  <a class="dropbtn">Property</a>
+  <a class="dropbtn">Reports</a>
   <div id="myDropdown" class="dropdown-content">
-    <a href="addproperty.php">Add New Property</a>
-    <a href="#">View Properties</a>
+    <a href="addproperty.php">My Property</a>
+    <a href="#">Transactions </a>
     
   </div>
   </div>
-
-
-
-<li><div class="input-group">
-    
-<div class="dropdown">
-<a class="dropbtn">Reports</a>
-  
-</div> </div>
 
 
 <li><div class="input-group">
@@ -82,7 +62,7 @@
 <!--
 <div id="sidebar" style="background-image: url('background.jpg');">-->
 
-<div id ="mainContent" style="background-image: url('');">
+<div id ="mainContent" style="background-image: url('./img/background.jpg');">
 
 </div>
 </div>    

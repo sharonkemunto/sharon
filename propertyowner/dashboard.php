@@ -5,36 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Property Owner Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="../index/style.css">
+    <link rel="stylesheet" type="text/css" href="../agent/style.css">
 
 </head>
 <body>
-<nav>
-        <ul>
-            <li><a href="index.php" class="active">Home</a></li>
-            <li><a href="#"> View Property</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Get in Touch</a></li>
-            <div class="admin"><li><a href="#">login</a></li></div>
 
-        </ul>
-    </nav> 
-
+<div id="header">
+<center> <h2>Welcome to Property Owner Dashboard</h2> </h2></center>
+</div> 
 <div class="sidebar-container">
 
 
-<div id="sidebar">
+<div id="sidebar" style="width:450px;">
 <ul> 
-    <li><h1>Property Owner Dashboard</h1> </li>
+    <li><h1>Table List</h1> </li>
 
  <li><div class="input-group">
  <div class="dropdown">
   <button class="dropbtn">Property</button>
   <div id="myDropdown" class="dropdown-content">
-    <a href="../register/register.php">Add New Property</a>
-    <a href="../Tables/users.php">View Property</a>
+    <a href="requestform.php">Add New Property</a>
+    <a href="#">View Property</a>
     
   </div>
 </div>
@@ -47,7 +38,6 @@
   <div id="myDropdown" class="dropdown-content">
     <a href="#">Transactions</a>
     <a href="#">Payments</a>
-    <a href="#">View All Payments</a>  
   </div>
   </div>
 
@@ -73,7 +63,7 @@
 <!--
 <div id="sidebar" style="background-image: url('background.jpg');">-->
 
-<div id ="mainContent" style="background-image: url('./img/background.jpg');">
+<div id ="mainContent">
 
 </div>
 </div>    

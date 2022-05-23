@@ -19,7 +19,8 @@ include('../partials/connection.php');?>
     <nav>
         <ul>
             <li><a href="index.php" class="active">Home</a></li>
-            <li><a href=""> View Property</a></li>
+            <li><a href="viewproperty.php"> View Property</a></li>
+            <li><a href="../propertyowner/requestform.php"> Add new property</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Get in Touch</a></li>
@@ -50,12 +51,10 @@ include('../partials/connection.php');?>
     break;
   }}?>
 
-<div class="footer">
-  <p class="footer-text-left">
-   
-   <h4> All right reserved &copy  2022 kemunto</h4>
-  </p>
-</div>
+<footer>
+<p> Property Management System, Copyright &copy; 2022 </p>
+
+</footer>
 
 
 

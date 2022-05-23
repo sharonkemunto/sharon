@@ -1,24 +1,26 @@
+<?php
+session_start();
+include('../partials/connection.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel</title>
+    <title>My Profile</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
-    
-
-
 </head>
 <body>
+
 <div id="header">
 <center><img src="admin.png" alt="adminLogo" id="adminLogo"><br> <h2><b>Welcome to Admin Panel!</b> </h2></center>
 </div> 
 
-<h1> Hello! <?php echo $_SESSION ['username'];?></h1>
-
 <div class="sidebar-container">
-<div id="sidebar" style="width:450px;">
+
+
+<div id="sidebar">
 <ul> 
     <li><h1>Table</h1> </li>
 
@@ -26,8 +28,8 @@
  <div class="dropdown">
   <button class="dropbtn">Users</button>
   <div id="myDropdown" class="dropdown-content">
-    <a href="register.php">Add New User</a>
-    <a href="users.php">View Users</a>
+    <a href="../register/register.php">Add New User</a>
+    <a href="../Tables/users.php">View Users</a>
     
   </div>
 </div>
@@ -73,7 +75,7 @@
 <div class="dropdown">
   <a class="dropbtn">My Profile</a>
   <div id="myDropdown" class="dropdown-content">
-    <a href="./profile.php">View Profile</a>
+    <a href="#">View Profile</a>
     <a href="#">Change Password</a>
     <a href="#">Log Out</a>
 
@@ -83,26 +85,4 @@
 </div> 
 </ul>
 
-
-</div>    
-
-<div id ="mainContent">
-  <!--content-->
-  <p>content</p>
-<p style="background-image: url('../bg2.jpg');"> 
-
-</div>
-</div>    
-
-<div class="footer">
-  <p class="footer-text-left">
-   
-   <h4> All right reserved &copy  2022 kemunto</h4>
-  </p>
-</div>
-
-
 </body>
-<!--link to javascript file thats used to display the children elements in the block-->
-<script src="../scripts/script.js"></script>
-</html>

@@ -13,6 +13,7 @@
         <ul>
             <li><a href="index.php" class="active">Home</a></li>
             <li><a href="viewproperty.php"> View Property</a></li>
+            <li><a href="../requestform.php"> Add new property</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Get in Touch</a></li>

@@ -1,3 +1,8 @@
+<?php 
+include('../register/server.php');
+if($username !== ""){
+  
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,13 +17,25 @@
 
 </head>
 <body>
-<div id="header">
-<center><h1> Property Owner Request Form</h1> </center>
-</div> 
+
+<nav>
+        <ul>
+            <li><a href="index.php" class="active">Home</a></li>
+            <li><a href="viewproperty.php"> View Property</a></li>
+            <li><a href="../propertyowner/requestform.php"> Add new property</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Get in Touch</a></li>
+            <div class="admin"><li><a href="#">login</a></li></div>
+
+        </ul>
+    </nav>
+
+
 	
    
 <form method="POST" action="#" name="property" onsubmit="return FormValidation()" enctype="multipart/form-data" >
-<div> <h3> Request To add Property</h3></div>
+<div> <h3> Property Owner Request Form</h3></div>
   	<div class="input-group">
   	  <label>Property Name:</label>
   	  <input type="text" name="pname"  id="pname" >
@@ -128,10 +145,12 @@
     
     }
     </script> 
+<footer>
+<p> Property Management System, Copyright &copy; 2022 </p>
 
-  <div class="footer">
-  <p class="footer-text-left">
-   
-   <h4> All right reserved &copy  2022 kemunto</h4>
-  </p>
-</div>
+</footer>
+<?php } else { 
+  header("Location:../register/login.php"); 
+}?>
+</body>
+</html>

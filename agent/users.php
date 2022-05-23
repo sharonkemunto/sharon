@@ -6,16 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
-    
-
+    <link rel="stylesheet" type="text/css" href="../Tables/table.css"/>
 
 </head>
 <body>
 <div id="header">
 <center><img src="admin.png" alt="adminLogo" id="adminLogo"><br> <h2><b>Welcome to Admin Panel!</b> </h2></center>
 </div> 
-
-<h1> Hello! <?php echo $_SESSION ['username'];?></h1>
 
 <div class="sidebar-container">
 <div id="sidebar" style="width:450px;">
@@ -88,8 +85,36 @@
 
 <div id ="mainContent">
   <!--content-->
-  <p>content</p>
-<p style="background-image: url('../bg2.jpg');"> 
+  <div class="container">
+      <?php 
+        include('../partials/connection.php');
+        $sql = "SELECT * FROM users";
+        $result = $connection->query($sql);
+        $connection->close();
+      ?>
+        <table class="tableContainer">
+            <h2>Users Table</h2>
+            <tr>
+                <th>user id</th>
+                <th>username</th>
+                <th>email</th>
+                <th>role</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            <?php while($rows=$result->fetch_assoc()){ ?>
+            <tr>
+                <td><?php echo $rows['id'] ?></td>
+                <td><?php echo $rows['username'] ?></td>
+                <td><?php echo $rows['email'] ?></td>
+                <td><?php echo $rows['role'] ?></td>  
+                <td><a href="./Edit/Users.php?id=<?php echo $rows['id']?>">Edit</a></td>
+                <td>Delete</td>    
+            </tr>
+            <?php } ?>
+        </table>
+
+    </div>
 
 </div>
 </div>    
